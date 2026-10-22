@@ -1,0 +1,9 @@
+[Unit]
+Description=Send agent-graph daily report at 07:43 local time
+
+[Timer]
+OnCalendar=*-*-* 07:43:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

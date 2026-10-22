@@ -1,0 +1,13 @@
+[Unit]
+Description=agent-graph nightly self-review (Opus rewrites graph.md behind replay gates)
+
+[Service]
+Type=oneshot
+User=agentgraph
+WorkingDirectory=/opt/agent-graph/app/agent-graph
+ExecStart=/opt/agent-graph/venv/bin/python -m agentgraph nightly
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/agent-graph/app/agent-graph

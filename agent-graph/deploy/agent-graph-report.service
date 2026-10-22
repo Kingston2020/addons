@@ -1,0 +1,13 @@
+[Unit]
+Description=agent-graph daily report to Telegram
+
+[Service]
+Type=oneshot
+User=agentgraph
+WorkingDirectory=/opt/agent-graph/app/agent-graph
+ExecStart=/opt/agent-graph/venv/bin/python -m agentgraph report --send
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/agent-graph/app/agent-graph

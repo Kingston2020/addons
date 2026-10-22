@@ -1,0 +1,21 @@
+[Unit]
+Description=agent-graph daemon (GitHub issues on kingston2020/addons)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agentgraph
+WorkingDirectory=/opt/agent-graph/app/agent-graph
+ExecStart=/opt/agent-graph/venv/bin/python -m agentgraph run --pick-up --port 8765
+Restart=always
+RestartSec=10
+StartLimitIntervalSec=0
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/agent-graph/app/agent-graph
+
+[Install]
+WantedBy=multi-user.target
