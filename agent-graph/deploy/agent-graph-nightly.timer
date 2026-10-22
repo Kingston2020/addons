@@ -1,0 +1,9 @@
+[Unit]
+Description=Run agent-graph nightly review at 03:17 local time
+
+[Timer]
+OnCalendar=*-*-* 03:17:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

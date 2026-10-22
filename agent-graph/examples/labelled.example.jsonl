@@ -1,0 +1,4 @@
+{"question": "route", "state": {"title": "Update mosquitto to 2.0.22", "body": "New upstream release is out.", "labels": ["agent"]}, "expected": "version_bump"}
+{"question": "route", "state": {"title": "SSH add-on drops connection after 5 minutes", "body": "No idea why, logs attached.", "labels": ["agent"]}, "expected": "needs_human"}
+{"question": "addon", "state": {"title": "Duck DNS: add IPv6 option to docs", "body": "DOCS.md should mention ipv6.", "labels": ["agent"]}, "expected": "duckdns"}
+{"question": "plan_complete", "state": {"issue": {"title": "Bump piper", "body": "new version"}, "addon": "piper", "plan": {"summary": "edit Dockerfile only", "files": [{"path": "piper/Dockerfile"}]}}, "expected": false}
